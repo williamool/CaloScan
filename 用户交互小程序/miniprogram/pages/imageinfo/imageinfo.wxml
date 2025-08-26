@@ -1,0 +1,9 @@
+<!--pages/imageinfo/imageinfo.wxml-->
+<view class="text">今日摄取的营养素含量参考</view>
+<view class="imagebox">
+    <image class="imagex" src="{{yinyang}}" mode="widthFix"></image>
+    <image class='imagex' src="{{weisheng}}" mode='widthFix'></image>
+    <image class="imagex" src="{{weiliang}}" mode="widthFix"></image>
+    <image class="imagex" src="{{zhuzhuang}}" mode="widthFix"></image>
+    <image class="imagex" src="{{zhexian}}" mode="widthFix"></image>
+</view>

@@ -1,0 +1,19 @@
+<view class="load" wx:if="{{!loginOk}}">
+    <image src="ME.png" bind:tap="load"></image>
+    <view class="logininfo">登入以获得更多权限！</view>
+</view>
+
+<view class="log">
+<view class="login">
+  <view>账号：</view>
+  <input placeholder="请输入内容" bindinput="handleInputname" />
+</view>
+<view class="login">
+  <view>密码：</view>
+  <input placeholder="请输入内容" bindinput="handleInputpassword" />
+</view>
+</view>
+
+<view class="loadType">
+    <button type="primary" bindtap="login">登录</button>
+</view>

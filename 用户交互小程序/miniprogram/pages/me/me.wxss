@@ -1,0 +1,201 @@
+/* pages/me/me.wxss */
+.load{
+    background-color:#0d9dc9;
+    width: 100%;
+    height: 400rpx;
+    /*设置图片和文字垂直居中对齐*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+.load image{
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 50%;
+}
+.load text{
+    color:white;
+}
+.exit{
+    margin: 10rpx;
+}
+
+.BUTTON {
+    color: white;
+}
+
+.personinfo {
+    margin: 20rpx;
+    border: 2px solid #ccc;
+    border-radius: 10rpx;
+}
+
+.input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 20rpx;
+}
+
+.box1 {
+    display: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.Text {
+    margin-top: 20rpx;
+}
+
+.Text1 {
+    margin: 20rpx;
+}
+
+.clickload {
+    margin-top: 20rpx;
+}
+
+.button1 {
+    background-color: #04BE02;
+    color: white;
+    margin: 10rpx;
+}
+
+.step {
+    justify-content: center;/* 水平居中 */
+    align-items: center;    /* 垂直居中 */
+    background-color:lightblue; /* 浅蓝色背景 */
+    box-sizing: border-box;  /* 边框计算在宽度内 */
+    width: 94%;            /* 宽度设为100%，如果需要可以设置具体宽度 */
+    height: 100px;          /* 高度，根据需要调整 */
+    font-size: 20px;    
+    margin: 3%;
+    flex-direction: column;
+    display: flex;
+    border-radius: 10px;
+}
+
+
+.sanjiao{
+    width: 20rpx;
+    height: 15rpx;
+    margin-left: 10rpx;
+    transition: 0.5s;/* 选转图片过渡 */
+}
+.select{
+    position: absolute;
+    z-index: 10;
+    border: 2rpx solid #aaaaaa;
+    padding: 0 8rpx;
+    top: 1000rpx;
+    left: 300rpx;
+    width: 210rpx;
+    overflow: auto;
+    height: 0;
+    max-height: 200rpx;
+    background-color:#fff;
+    box-sizing: border-box;
+    transition: height 0.5s;/* 高度变换过渡 */
+}
+.select .type{
+    color: #aaaaaa;
+    border-top: 2px solid #dadada;
+    padding: 6rpx;
+}
+.select :first-child{
+    border: 0;
+}
+.item {
+    justify-content: center;
+    align-items: center; 
+    display: flex;
+    flex-direction:row  
+}
+
+.value {
+    margin: 20rpx;
+}
+
+.top {
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    border: 2px solid #ccc;
+    border-radius: 10rpx;
+}
+
+.box2 {
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 20rpx;
+}
+
+.box3 {
+    text-align: center;
+    justify-content: center;
+    padding-top: 10rpx;
+    padding-bottom: 20rpx;
+    font-size: 40rpx;
+    font-weight: 1000;
+}
+
+.userinfo {
+  padding-top: 10rpx;
+}
+
+.inputbox {
+  margin-left: 200rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 10rpx;
+  font-size: 32rpx;
+  color: #353535;
+}
+
+.inptxt {
+  text-align: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.inpbox {
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.inp {
+  position: relative;
+  width: 100%;
+  height: 80rpx;
+}
+
+.telinpbox {
+  width: 240rpx;
+  height: 52rpx;
+  overflow: hidden;
+  margin-top: 10rpx;
+}
+
+.telinp {
+  width: 55rpx;
+  height: 55rpx;
+  overflow: hidden;
+  margin-left: 25rpx;
+}
+
+.radiogroup {
+  display: flex;
+  flex-direction: row;
+}
+
+.radiobox {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10rpx;
+}

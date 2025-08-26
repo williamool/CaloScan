@@ -1,0 +1,27 @@
+<!--pages/home/home.wxml-->
+<image class="imageinfo" src="/images/health.jpg" style="width:100%"></image>
+
+<view class="container">
+    <button class="button_1" bind:tap="get_daily_dish" type="primary">更新今日饮食信息</button>
+</view>
+
+<view class="information">
+    <view class="small-title">今日饮食信息</view>
+    <view class="divider"></view>
+    <view class="flex_container">
+        <view class="left_info">菜品种类</view>
+        <view class="right_info">摄入量</view>
+    </view>
+    <view class="divider"></view>
+    <view class="flex_container" wx:for="{{weight}}" wx:key="index">
+        <view class="left_info">{{dishid[index]}}</view>
+        <view class="right_info">{{item}}g / {{price[index]}}元</view>
+    </view>
+    <view class="divider"></view>
+    <view class="flex_container">
+        <view class="left_info">今日总消费：</view>
+        <view class="right_info">{{totalprice}}元</view>
+    </view>
+</view>
+
+

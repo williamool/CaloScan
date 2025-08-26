@@ -1,0 +1,27 @@
+<!--pages/message/message.wxml-->
+<image class="imageinfo" src="/images/health.jpg" style="width:100%"></image>
+
+<view class="step">
+    <view>您今天的运动步数为：{{step ? step:"正在获取步数信息"}}</view>
+    <view>运动状态：{{status}}</view>
+    <view>预估消耗热量为：{{hot}} Calorie</view>
+</view>
+
+<view class="detail">
+<view class="item">
+  <label class="first"><text></text>选择统计日期：</label>
+  <!-- 通过点击事件改变图片的旋转角度、自定义下拉框的高度 -->
+  <view class="value" bindtap="select">
+    <view style="display:inline-block;">{{type!=''?type:'选择日期'}}</view>
+    <image src="./figure.jpg" class="sanjiao" style="{{isSelect?'transform:rotateZ(180deg)':''}}"/>
+    <!-- select -->
+    <view class="select" style="{{isSelect?'height:'+54*types.length+'rpx;':'border:0'}}">
+      <view class="type" catchtap="getType" wx:for="{{types}}" data-type="{{item}}" wx:key="type">{{item}}</view>
+    </view>
+  </view>
+</view>
+
+<button class="button1" bind:tap="refresh_data" type="primary">点击以更新数据</button>
+<button class="button1" bind:tap="gotoinfo" type="primary">获取饮食健康分析</button>
+<button class="button1" bind:tap="getacc" type="primary">获取饮食推荐数据</button>
+</view>

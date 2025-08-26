@@ -1,0 +1,4 @@
+<!-- page.wxml -->
+<image class="imageinfo" src="/images/health.jpg" style="width:100%"></image>
+<text wx:if="{{fileContent}}" class='answer'>{{fileContent}}</text>
+<view wx:if="{{!fileContent}}" class="loading">加载中...</view>

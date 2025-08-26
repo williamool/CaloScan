@@ -1,0 +1,11 @@
+/* pages/textinfo/textinfo.wxss */
+.answer {
+  margin: 50rpx;
+  font-size: 35rpx;
+}
+
+.loading {
+  margin: 200rpx;
+  font-size: 50rpx;
+  text-align: center;
+}

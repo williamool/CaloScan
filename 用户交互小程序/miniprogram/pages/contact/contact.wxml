@@ -1,0 +1,16 @@
+<!--pages/contact/contact.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <!-- 授权前 -->
+    <block wx:if="{{!hasUserInfo}}">
+      <button class='account' bindtap="getUserProfile"> 获取头像昵称 </button>
+    </block>
+    <!-- 授权后 -->
+    <block wx:else>
+     <view class="users">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+     </view>
+    </block>
+  </view>
+</view>

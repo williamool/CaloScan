@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/message/message",
+    "pages/contact/contact",
+    "pages/imageinfo/imageinfo",
+    "pages/textinfo/textinfo",
+    "pages/load/load",
+    "pages/me/me",
+    "pages/loadorme/loadorme",
+    "pages/index/index",
+    "pages/goods-list/index",
+    "pages/examples/index",
+    "pages/user-center/index",
+    "pages/exampleDetail/index",
+    "pages/deployService/index",
+    "pages/updateRecord/index",
+    "pages/updateRecordResult/index",
+    "pages/updateRecordSuccess/index",
+    "pages/sumRecord/index",
+    "pages/sumRecordResult/index",
+    "pages/web/index",
+    "pages/cloudbaseModuleDetail/index",
+    "pages/cloudbaseModuleInstallTips/index",
+    "pages/cloudbaseModuleGuide/index",
+    "pages/business/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2b4b6b",
+    "navigationBarTitleText": "CaloScan_你的饮食顾问",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+
+  "tabBar": {
+    "list": [
+    {   
+        "pagePath": "pages/home/home",
+        "text": "饮食信息",
+        "iconPath": "/images/bar3.png",
+        "selectedIconPath": "/images/bar4.png"
+    },
+    {
+      "pagePath": "pages/message/message",
+      "text": "营养咨询",
+      "iconPath": "/images/bar1.png",
+      "selectedIconPath": "/images/bar2.png"
+    },
+    {
+      "pagePath": "pages/loadorme/loadorme",
+      "text": "个人信息",
+      "iconPath": "/images/bar5.png",
+      "selectedIconPath": "/images/bar6.png"
+    }]
+  }
+}

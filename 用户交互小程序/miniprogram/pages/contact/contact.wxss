@@ -1,0 +1,18 @@
+/* pages/contact/contact.wxss */
+.users {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+.userinfo-avatar {
+    height: 260rpx;
+    width: 260rpx;
+    border-radius: 50%;
+}
+.account {
+    color: whitesmoke;
+    background-color: grey;
+    margin-top: 240px;
+    font-size: 50rpx;
+}

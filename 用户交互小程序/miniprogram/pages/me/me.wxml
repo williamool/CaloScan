@@ -1,0 +1,45 @@
+<!--已登录-->
+<view>
+    <view class="load" >
+        <image src="ME.png" ></image>
+        <text class="userinfo">您好，{{username}}</text>
+    </view>
+    <button class="exit" bindtap="exit" type="primary">退出登录</button>
+</view>
+
+<view class="personinfo">
+  <view class="box1">
+    <view class="Text1">您当前的账户余额为：{{cash}}元</view>
+  </view>
+</view>
+
+<button class="exit" type="primary">充值</button>
+
+<view class="personinfo">
+      <view class="box1">
+      <view class="inputbox">
+        <view class="inptxt">性别：</view>
+        <view class="inpbox">
+          <radio-group bindchange="radioChange" class="inp radiogroup">
+            <view class="radiobox" wx:for="{{sex}}" wx:key="value">
+              <radio value="{{item.id}}" color="#ff0000" checked="{{item.checked}}"/>
+              <view class="radiotxt">{{item.value}}</view>
+            </view>
+          </radio-group>          
+        </view>
+      </view>
+        <view class="Text">您保存的年龄信息：{{age}}岁</view>
+        <view class="Text">您保存的身高信息：{{userheight}}cm</view>
+        <view class="Text">您保存的体重信息：{{userweight}}kg</view>
+        <view class="Text">您的当前BMI：{{BMI}}</view>
+        <view class="box3">{{status}}</view>
+    </view>
+</view>
+<view class="personinfo">
+    <view class="box1">
+      <input bindinput="userheight" class="input" name="height" placeholder="请输入您的身高信息" auto-focus="true"></input>
+      <input bindinput="userweight" class="input" name="weight" placeholder="请输入您的体重信息" auto-focus="true"></input>
+      <input bindinput="userage" class="input" name="age" placeholder="请输入您的年龄信息" auto-focus="true"></input>
+      <button class="button1" bind:tap="calculate" type="primary">保存修改</button>
+    </view>
+</view>

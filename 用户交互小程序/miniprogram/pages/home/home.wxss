@@ -1,0 +1,77 @@
+/* pages/home/home.wxss */
+.information {
+    background-color: whitesmoke;
+    padding-top: 20rpx;
+    height: 1200rpx; /* 使用视窗高度，可以垂直居中 */
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    border: 2px solid #ccc;
+    border-radius: 20rpx;
+}
+
+.small-title {
+    font-size: 40rpx; 
+    text-align: center;
+    justify-content: center;
+}
+
+.flex_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 如果需要，可以垂直居中 */
+}
+
+.left_info {
+    font-size: 30rpx;
+    margin-left: 10rpx;
+}
+
+.right_info {
+    font-size: 30rpx;
+    margin-right: 10rpx;
+}
+
+.divider {
+    width: 100%; /* 分割线的宽度，根据需要调整 */
+    border-top: 1px solid #ccc; /* 分割线的颜色和粗细 */
+    margin: 10px 0; /* 分割线与周围元素的间距 */
+}
+
+.title {
+    padding-top: 100rpx;
+    padding-bottom: 100rpx;
+    display: flex;
+    justify-content: center;
+    font-size: 50rpx;
+}
+
+.button_1 {
+    height: 100rpx;
+    font-size: 40rpx;
+    width: 690rpx;
+    background-color: #04BE02;
+    color: white;
+    margin: 20rpx;
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中 */
+}
+
+.imageinfo {
+    margin-bottom: 10rpx;
+}
+
+.text1 {
+    font-size: 22rpx;
+    text-align: center;
+    margin-bottom: 20rpx;
+}
+
+.weightinfo {
+    font-size: 40rpx;
+    margin: 30rpx;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 10rpx;
+    padding-top: 10rpx;
+    padding-bottom: 10px;
+}
