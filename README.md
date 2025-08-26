@@ -21,15 +21,15 @@
 ## Project Overview
 CaloScan addresses the growing demand for efficient and healthy dining in community canteens across the country. With the rise of various community dining facilities and the increasing attention of modern people to dietary health, traditional canteen operations face several challenges:
 
-Low Efficiency During Peak Hours: Manual checkout is slow and inefficient, especially during mealtimes.
+- **Low Efficiency During Peak Hours**: Manual checkout is slow and inefficient, especially during mealtimes.
 
-High Management Pressure: Backend management of multiple canteens is labor-intensive, with significant differences in performance between locations.
+- **High Management Pressure**: Backend management of multiple canteens is labor-intensive, with significant differences in performance between locations.
 
-Difficult Record Keeping: Manual dietary records are cumbersome and hard to maintain, particularly for elderly users who are more concerned about their health.
+- **Difficult Record Keeping**: Manual dietary records are cumbersome and hard to maintain, particularly for elderly users who are more concerned about their health.
 
-Challenging Analysis: Most users lack the knowledge to interpret nutritional information.
+- **Challenging Analysis**: Most users lack the knowledge to interpret nutritional information.
 
-Limited Personalized Guidance: There is a shortage of individualized dietary recommendations.
+- **Limited Personalized Guidance**: There is a shortage of individualized dietary recommendations.
 
 CaloScan aims to overcome these issues by integrating automatic dish recognition and weighing, synchronized dietary records, personalized analysis, and intelligent recommendations, while providing an admin backend for canteen managers to efficiently manage dish information.
 
@@ -47,11 +47,11 @@ CaloScan aims to overcome these issues by integrating automatic dish recognition
 
 | Wechat Mini Program 1 | Wechat Mini Program 2 | Wechat Mini Program 3 |
 |--------|--------|--------|
-| ![Demo1](images/program.jpg) | ![Demo2](images/program.jpg) | ![Demo3](images/program.jpg) |
+| ![Demo1](Image/program.jpg) | ![Demo2](Image/program.jpg) | ![Demo3](Image/program.jpg) |
 
 | Wechat Mini Program 4 | Wechat Mini Program 5 | Wechat Mini Program 6 |
 |--------|--------|--------|
-| ![Demo4](images/program.jpg) | ![Demo5](images/program.jpg) | ![Demo6](images/program.jpg) |
+| ![Demo4](Image/program.jpg) | ![Demo5](Image/program.jpg) | ![Demo6](Image/program.jpg) |
 
 ---
 
