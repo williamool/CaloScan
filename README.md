@@ -19,11 +19,19 @@
 ---
 
 ## Project Overview
-CaloScan aims to achieve the following:
-A fully automated checkout system with automatic dish recognition + weighing.
-Synchronized dietary records, where dish information is automatically uploaded during payment.
-Personalized dietary analysis and intelligent recommendations based on collaborative filtering algorithms (via WeChat Mini Program).
-An admin backend for canteen managers to manage dish information efficiently.
+CaloScan addresses the growing demand for efficient and healthy dining in community canteens across the country. With the rise of various community dining facilities and the increasing attention of modern people to dietary health, traditional canteen operations face several challenges:
+
+Low Efficiency During Peak Hours: Manual checkout is slow and inefficient, especially during mealtimes.
+
+High Management Pressure: Backend management of multiple canteens is labor-intensive, with significant differences in performance between locations.
+
+Difficult Record Keeping: Manual dietary records are cumbersome and hard to maintain, particularly for elderly users who are more concerned about their health.
+
+Challenging Analysis: Most users lack the knowledge to interpret nutritional information.
+
+Limited Personalized Guidance: There is a shortage of individualized dietary recommendations.
+
+CaloScan aims to overcome these issues by integrating automatic dish recognition and weighing, synchronized dietary records, personalized analysis, and intelligent recommendations, while providing an admin backend for canteen managers to efficiently manage dish information.
 
 ---
 
