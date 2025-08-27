@@ -124,8 +124,8 @@ git clone https://github.com/williamool/CaloScan.git
 ```
 
 - 配置数据集：
-数据集地址：[LargeFineFoodAI](https://platform.sankuai.com/foodai2021.html#index)
-修改split_data.py, delete_ErrorImage.py, data_mean_std.py中的数据集路径
+数据集地址：[LargeFineFoodAI](https://platform.sankuai.com/foodai2021.html#index)<br>
+修改split_data.py, delete_ErrorImage.py, data_mean_std.py中的数据集路径<br>
 运行脚本准备数据：
 ```bash
 python split_data.py
@@ -176,17 +176,17 @@ python banch_predict.py
 
 ### 6.Web端
 - 依赖环境：
-**Node.js/MySQL**
+**Node.js/MySQL**<br>
 **后端API**
 - 功能：
-可视化展示菜品销量信息
+可视化展示菜品销量信息<br>
 支持管理员实时修改菜品单价与营养成分信息
 
 ### 7.Qt端
 -依赖环境：
 **Qt 5**
 -功能：
-展示菜品单价及总价
+展示菜品单价及总价<br>
 支持用户人脸注册，人脸支付
 
 ---
