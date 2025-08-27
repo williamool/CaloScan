@@ -1,6 +1,6 @@
 # CaloScan
 
-**CaloScan: All-in-One Nutrition & POS System**  
+**CaloScan: All-in-One Nutrition Analysis & POS System**  
 智能饮食分析 + 收银一体化系统
 
 --- 
@@ -9,12 +9,11 @@
 1. [Project Overview](#project-overview)
 2. [Features](#features)
 3. [Demo](#demo)
-4. [Installation](#installation)
-5. [Usage](#usage)
-6. [Architecture](#architecture)
-7. [Technologies](#technologies)
-8. [Contributing](#contributing)
-9. [License](#license)
+4. [Architecture](#architecture)
+5. [Installation and Usage](#installation)
+6. [Technologies](#technologies)
+7. [Contributing](#contributing)
+8. [License](#license)
 
 ---
 
@@ -70,16 +69,123 @@ CaloScan aims to overcome these issues by integrating automatic dish recognition
 |--------|--------|
 | ![Demo1](Image/web1.png) | ![Demo2](Image/web2.png) |
 
-<div>
+</div>
+
+
+---
+## Architecture
+project/
+├── Model/
+│   ├── split_data.py              # 将food2K数据集划分训练/验证集
+│   ├── delete_ErrorImage.py       # 清除错误图像
+│   ├── data_mean_std.py           # 计算数据集RGB均值与方差
+│   ├── model.py                   # ResNet模型文件（18/34/50/101, ResNeXt-50/101）
+│   ├── train.py                   # 模型训练（默认ResNet50，200 epoch）
+│   ├── class_indices.json         # 类别 ↔ 索引映射
+│   ├── banch_predict.py           # 模型验证
+│   └── permission_check.py        # 文件夹读写权限检查
+│
+├── Get_dish_id/
+│   └── get_str.py                 # 生成类别编号与菜名映射文件
+│
+├── pytorch_to_caffe_master/
+│   ├── pytorch_to_caffee.py       # 核心转换工具
+│   └── resnet_pytorch_2_caffee.py # Pytorch模型转Caffe模型
+│
+├── Wechat_program/                     # 需配合华为云 & 微信开发者工具
+│
+├── Cloud/
+│   ├── 华为云RDS (MySQL)          # 用户信息存储
+│   ├── 华为云OBS                  # 菜品信息存储
+│   ├── 华为云ECS                  # 部署推荐算法
+│   └── 华为云IoTDA                # IoT设备交互
+│
+├── Web/ (缺失)              # 管理员操作界面
+└── Qt/ (缺失)               # 支持人脸支付与价格展示
+
+
+---
 
 
 ---
 
 ## Installation
+
+### 1.环境准备
+- Python 3.7+
+- [PyTorch](https://pytorch.org/get-started/locally/)  
+- 其他常见依赖库
+
+### 2.模型训练
+- 克隆仓库：
 ```bash
-# 克隆仓库
-git clone https://github.com/yourusername/CaloScan.git
-# 进入项目目录
-cd CaloScan
-# 安装依赖 (根据你的项目语言/框架填写)
-npm install  # 或 pip install -r requirements.txt
+git clone https://github.com/williamool/CaloScan.git
+```
+
+- 配置数据集：
+数据集地址：[LargeFineFoodAI](https://platform.sankuai.com/foodai2021.html#index)
+修改split_data.py, delete_ErrorImage.py, data_mean_std.py中的数据集路径
+运行脚本准备数据：
+```bash
+python split_data.py
+python delete_ErrorImage.py
+python data_mean_std.py
+```
+
+- 训练模型：
+运行以下命令开始训练：（默认使用**Resnet 50**，训练**200 epoch**）
+```bash
+python train.py
+```
+
+- 模型验证：
+运行以下命令以验证模型：
+```bash
+python banch_predict.py
+```
+
+### 3.模型转换（Pytorch → Caffe → 海思NNIE）
+- 使用工具目录`pytorch_to_caffe_master/`：
+- `resnet_pytorch_2_caffee.py`  
+  - 修改 **模型路径** 与 **保存路径**  
+  - 运行后生成 `.prototxt`（网络结构） 和 `.caffemodel`（权重）  
+- `pytorch_to_caffee.py`  
+  - 核心转换文件，无需修改  
+
+- 检查网络结构
+使用 [Netscope](https://ethereon.github.io/netscope/#/editor) 可视化工具检查生成的 `.prototxt` 文件是否正确
+
+- 转换为NNIE引擎可执行的.wk文件
+在 **海思 RuyiStudio** 中将 Caffe 模型转换为 `.wk` 文件，用于 Hi3516 部署
+
+### 4.微信小程序
+- 环境依赖：微信开发者工具、华为云SDK
+- 导入`Wechat_program`代码至**微信开发者工具**
+- 配置后端API地址（ECS部署服务）
+- 使用华为云账号完成云服务对接
+
+### 5.华为云
+- 依赖服务：
+**华为云RDS**（MySQL）：建表，导入用户信息
+**华为云OBS**（对象存储服务）：上传菜品信息（名称、营养成分等）
+**华为云ECS**（服务器）：部署推荐算法与后端服务
+**华为云IoTDA**：配置Hi3861设备接入
+- 代码框架：
+`Cloud/`
+
+### 6.Web端
+- 依赖环境：
+**Node.js/MySQL**
+**后端API**
+- 功能：
+可视化展示菜品销量信息
+支持管理员实时修改菜品单价与营养成分信息
+
+### 7.Qt端
+-依赖环境：
+**Qt 5**
+-功能：
+展示菜品单价及总价
+支持用户人脸注册，人脸支付
+
+---
