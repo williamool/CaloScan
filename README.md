@@ -44,14 +44,17 @@ CaloScan aims to overcome these issues by integrating automatic dish recognition
 ---
 
 ## Demo
+<div align="center">
 
-| Wechat Mini Program 1 | Wechat Mini Program 2 | Wechat Mini Program 3 |
+| Wechat Mini Program Demo 1 | Wechat Mini Program Demo 2 | Wechat Mini Program Demo 3 |
 |--------|--------|--------|
-| ![Demo1](Image/program1.jpg) | ![Demo2](Image/program2.jpg) | ![Demo3](Image/program3.jpg) |
+| ![Demo1](Image/program1.png) | ![Demo2](Image/program2.png) | ![Demo3](Image/program3.png) |
 
-| Wechat Mini Program 4 | Wechat Mini Program 5 | Wechat Mini Program 6 |
+| Wechat Mini Program Demo 4 | Wechat Mini Program Demo 5 | Wechat Mini Program Demo 6 |
 |--------|--------|--------|
-| ![Demo4](Image/program4.jpg) | ![Demo5](Image/program5.jpg) | ![Demo6](Image/program6.jpg) |
+| ![Demo4](Image/program4.png) | ![Demo5](Image/program5.png) | ![Demo6](Image/program6.png) |
+
+</div>
 
 ---
 
