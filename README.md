@@ -74,6 +74,7 @@ CaloScan aims to overcome these issues by integrating automatic dish recognition
 
 ---
 ## Architecture
+```
 project/
 ├── Model/
 │   ├── split_data.py              # 将food2K数据集划分训练/验证集
@@ -102,7 +103,7 @@ project/
 │
 ├── Web/ (缺失)              # 管理员操作界面
 └── Qt/ (缺失)               # 支持人脸支付与价格展示
-
+```
 
 ---
 
