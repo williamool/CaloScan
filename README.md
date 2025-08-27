@@ -112,12 +112,12 @@ project/
 
 ## Installation
 
-### 1.环境准备
+### 1. 环境准备
 - Python 3.7+
 - [PyTorch](https://pytorch.org/get-started/locally/)  
 - 其他常见依赖库
 
-### 2.模型训练
+### 2. 模型训练
 - 克隆仓库：
 ```bash
 git clone https://github.com/williamool/CaloScan.git
@@ -145,7 +145,7 @@ python train.py
 python banch_predict.py
 ```
 
-### 3.模型转换（Pytorch → Caffe → 海思NNIE）
+### 3. 模型转换（Pytorch → Caffe → 海思NNIE）
 - 使用工具目录`pytorch_to_caffe_master/`：
 - `resnet_pytorch_2_caffee.py`  
   - 修改 **模型路径** 与 **保存路径**  
@@ -156,37 +156,37 @@ python banch_predict.py
 - 检查网络结构
 使用 [Netscope](https://ethereon.github.io/netscope/#/editor) 可视化工具检查生成的 `.prototxt` 文件是否正确
 
-- 转换为NNIE引擎可执行的.wk文件<br>
+- 转换为NNIE引擎可执行的.wk文件：<br>
 在 **海思 RuyiStudio** 中将 Caffe 模型转换为 `.wk` 文件，用于 Hi3516 部署
 
-### 4.微信小程序
+### 4. 微信小程序
 - 环境依赖：微信开发者工具、华为云SDK
-- 导入`Wechat_program`代码至**微信开发者工具**
+- 导入 `Wechat_program` 代码至**微信开发者工具**
 - 配置后端API地址（ECS部署服务）
 - 使用华为云账号完成云服务对接
 
-### 5.华为云
+### 5. 华为云
 - 依赖服务：<br>
-**华为云RDS**（MySQL）：建表，导入用户信息<br>
-**华为云OBS**（对象存储服务）：上传菜品信息（名称、营养成分等）<br>
-**华为云ECS**（服务器）：部署推荐算法与后端服务<br>
-**华为云IoTDA**：配置Hi3861设备接入
+  - **华为云RDS**（MySQL）：建表，导入用户信息<br>
+  - **华为云OBS**（对象存储服务）：上传菜品信息（名称、营养成分等）<br>
+  - **华为云ECS**（服务器）：部署推荐算法与后端服务<br>
+  - **华为云IoTDA**：配置Hi3861设备接入
 - 代码框架：
 `Cloud/`
 
-### 6.Web端
+### 6. Web端
 - 依赖环境：<br>
-**Node.js/MySQL** <br>
-**后端API**
-- 功能：
-可视化展示菜品销量信息<br>
-支持管理员实时修改菜品单价与营养成分信息
+  - **Node.js/MySQL** <br>
+  - **后端API**
+- 功能：<br>
+  - 可视化展示菜品销量信息<br>
+  - 支持管理员实时修改菜品单价与营养成分信息
 
-### 7.Qt端
+### 7. Qt端
 - 依赖环境：
 **Qt 5**
 - 功能：<br>
-展示菜品单价及总价<br>
-支持用户人脸注册，人脸支付
+  - 展示菜品单价及总价<br>
+  - 支持用户人脸注册，人脸支付
 
 ---
