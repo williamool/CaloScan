@@ -11,9 +11,6 @@
 3. [Demo](#demo)
 4. [Architecture](#architecture)
 5. [Installation and Usage](#installation)
-6. [Technologies](#technologies)
-7. [Contributing](#contributing)
-8. [License](#license)
 
 ---
 
