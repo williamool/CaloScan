@@ -56,6 +56,23 @@ CaloScan aims to overcome these issues by integrating automatic dish recognition
 
 </div>
 
+<div align="center">
+
+| Qt Demo 1 | Qt Demo 2 |
+|--------|--------|
+| ![Demo1](Image/qt1.png) | ![Demo2](Image/qt2.png) |
+
+</div>
+
+<div align="center">
+
+| Web Demo 1 | Web Demo 2 |
+|--------|--------|
+| ![Demo1](Image/web1.png) | ![Demo2](Image/web2.png) |
+
+<div>
+
+
 ---
 
 ## Installation
