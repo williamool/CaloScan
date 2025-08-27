@@ -123,7 +123,7 @@ project/
 git clone https://github.com/williamool/CaloScan.git
 ```
 
-- 配置数据集：
+- 配置数据集：<br>
 数据集地址：[LargeFineFoodAI](https://platform.sankuai.com/foodai2021.html#index)<br>
 修改split_data.py, delete_ErrorImage.py, data_mean_std.py中的数据集路径<br>
 运行脚本准备数据：
@@ -134,13 +134,13 @@ python data_mean_std.py
 ```
 
 - 训练模型：
-运行以下命令开始训练：（默认使用**Resnet 50**，训练**200 epoch**）
+运行以下命令开始训练（默认使用**Resnet 50**，训练**200 epoch**）
 ```bash
 python train.py
 ```
 
 - 模型验证：
-运行以下命令以验证模型：
+运行以下命令以验证模型
 ```bash
 python banch_predict.py
 ```
@@ -149,14 +149,14 @@ python banch_predict.py
 - 使用工具目录`pytorch_to_caffe_master/`：
 - `resnet_pytorch_2_caffee.py`  
   - 修改 **模型路径** 与 **保存路径**  
-  - 运行后生成 `.prototxt`（网络结构） 和 `.caffemodel`（权重）  
+  - 运行后生成 `.prototxt`（网络结构）与 `.caffemodel`（权重）  
 - `pytorch_to_caffee.py`  
   - 核心转换文件，无需修改  
 
 - 检查网络结构
 使用 [Netscope](https://ethereon.github.io/netscope/#/editor) 可视化工具检查生成的 `.prototxt` 文件是否正确
 
-- 转换为NNIE引擎可执行的.wk文件
+- 转换为NNIE引擎可执行的.wk文件<br>
 在 **海思 RuyiStudio** 中将 Caffe 模型转换为 `.wk` 文件，用于 Hi3516 部署
 
 ### 4.微信小程序
@@ -166,26 +166,26 @@ python banch_predict.py
 - 使用华为云账号完成云服务对接
 
 ### 5.华为云
-- 依赖服务：
-**华为云RDS**（MySQL）：建表，导入用户信息
-**华为云OBS**（对象存储服务）：上传菜品信息（名称、营养成分等）
-**华为云ECS**（服务器）：部署推荐算法与后端服务
+- 依赖服务：<br>
+**华为云RDS**（MySQL）：建表，导入用户信息<br>
+**华为云OBS**（对象存储服务）：上传菜品信息（名称、营养成分等）<br>
+**华为云ECS**（服务器）：部署推荐算法与后端服务<br>
 **华为云IoTDA**：配置Hi3861设备接入
 - 代码框架：
 `Cloud/`
 
 ### 6.Web端
-- 依赖环境：
-**Node.js/MySQL**<br>
+- 依赖环境：<br>
+**Node.js/MySQL** <br>
 **后端API**
 - 功能：
 可视化展示菜品销量信息<br>
 支持管理员实时修改菜品单价与营养成分信息
 
 ### 7.Qt端
--依赖环境：
+- 依赖环境：
 **Qt 5**
--功能：
+- 功能：<br>
 展示菜品单价及总价<br>
 支持用户人脸注册，人脸支付
 
